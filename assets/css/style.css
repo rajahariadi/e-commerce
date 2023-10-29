@@ -60,6 +60,9 @@ a:active {
 
 .img-account-profile {
   height: 10rem;
+  width: 150px; 
+  height: 150px; object-fit: cover; 
+  object-position: center;
 }
 .rounded-circle {
   border-radius: 50% !important;
@@ -69,4 +72,37 @@ a:active {
 	overflow: hidden;
 	position: absolute;
 	z-index: -1;
+}
+
+input[type="file"]{
+  display: none;
+}
+.gambar{
+  display: block;
+  position: relative;
+  background-color: #025bee;
+  color: #ffffff;
+  font-size: 18px;
+  text-align: center;
+  width: 300px;
+  padding: 18px 0;
+  margin: auto;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.gambar-produk {
+  display: flex;
+  flex-wrap: wrap;
+  overflow-x: auto;
+  gap: 10px;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.gambar-produk img {
+  max-width: 200px;
+  max-height: 200px;
+  object-fit: cover;
 }
