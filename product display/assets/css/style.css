@@ -4,16 +4,11 @@
   background-color: #cce5ff;
 }
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
 html,
 body {
   font-family: 'montserrat';
 }
+
 
 a,
 a:hover,
@@ -35,7 +30,14 @@ img {
   border-radius: 0.9375rem;
   margin: auto;
   display: inline-block;
-  position: relative;
+}
+
+.pesanan-container{
+  border: 1px solid #DACDCD;
+  height: 50rem;
+  border-radius: 0.9375rem;
+  margin: auto;
+  display: inline-block;
 }
 
 .hover-container {
@@ -138,6 +140,7 @@ img {
 
 .pesanan h3 {
   padding-top: 40px;
+  padding-left: 20px;
   color: #000;
   font-family: Montserrat;
   font-size: 2rem;
@@ -220,4 +223,6 @@ img {
   font-style: normal;
   font-weight: 700;
   line-height: 1.5rem;
+  padding-left: 20px;
+  padding-right: 20px;
 }
