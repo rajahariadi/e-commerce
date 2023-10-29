@@ -54,6 +54,19 @@ a:active {
   border: 0.5px solid#d0d4d8;
 }
 
-.row .card:hover{
-  transform: scale(1.02) ;
+.row .card:hover {
+  transform: scale(1.02);
+}
+
+.img-account-profile {
+  height: 10rem;
+}
+.rounded-circle {
+  border-radius: 50% !important;
+}
+
+.inputfile {
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
 }
