@@ -1,19 +1,17 @@
-
-$('button').on('click', function() {
-    var kategori = $('input[name="nama_kategori"]').val();
-
+$('#formKategori').submit(function(e){
+    e.preventDefault();
+    var formData = new FormData(this);
     $.ajax({
         type: 'POST',
-        url: "http://localhost/e-commerce/dummy/input_kategori.php",
-        data: {
-            nama_kategori: kategori
+        url: host+"/dummy/input_kategori.php",
+        data: formData,
+        cache: false, contentType: false, processData: false,
+        success: (result) => {
+            console.log(result);
+            window.location.replace(host+"/kategori.html");
         },
-        dataType: 'json',
-        async: false,
-        success: function(result){
-           console.log(result);
+        error: (a) => {
+            //if error
         }
     });
-
 })
-

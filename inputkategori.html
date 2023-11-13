@@ -11,6 +11,7 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <script src="https://kit.fontawesome.com/664bfabc20.js" crossorigin="anonymous"></script>
+    <script src="env.js"></script>
     <title>Apple Store</title>
 </head>
 
@@ -136,15 +137,17 @@
         font-family: Montserrat;
         font-style: normal;
       ">
+                <form action="" id="formKategori">
                 <div class="card card-primary" style="border-color: white;">
                     <div class="card-header" style="border-bottom: none; background-color: white;">
                         <h3 class="card-title">
                             <i class="fa fa-edit"></i> Tambah Kategori
                         </h3>
                     </div>
-                    <form action="" method="post" enctype="multipart/form-data">
+
                         <div class="card-body">
                             <br>
+                            
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">Kategori</label>
                                 <div class="col-sm-6">
@@ -153,11 +156,11 @@
                             </div>
                         </div>
                         <div class="card-footer" style="border-top: none; background-color: white;">
-                            <button class="btn btn-primary">Simpan</button>
+                            <input type="submit" name="simpan" value="Simpan" class="btn btn-primary">
                             <a href="kategori.html" title="Kembali" class="btn btn-secondary">Batal</a>
                         </div>
-                    </form>
                 </div>
+              </form>
             </div>
         </div>
     </div>
