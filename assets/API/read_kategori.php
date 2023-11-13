@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect('localhost', 'root', '', 'e-commerce');
+$conn = mysqli_connect('localhost', 'root', '', 'e_commerce');
 
 $res = [
   "status" => 200,
