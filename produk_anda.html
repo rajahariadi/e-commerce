@@ -15,7 +15,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <link href="https://cdn.datatables.net/v/dt/dt-1.13.7/b-2.4.2/sl-1.7.0/datatables.css" rel="stylesheet" />
   <script src="https://cdn.datatables.net/v/dt/dt-1.13.7/b-2.4.2/sl-1.7.0/datatables.js"></script>
-  <script src="target/env.js"></script>
+  <script src="env.js"></script>
   <title>Apple Store</title>
 
 <body>
@@ -161,20 +161,19 @@
           <table class="table" style="width: 100%;" id="produk">
             <tbody>
               <tr>
-                <th style="width: 10%;" class="align-middle" colspan="2" rowspan="5">
-                  <img class="bg-white" src="assets/img/macbookprom1.png" alt="(Data Dari API)"
-                    style="width: 200px; border-radius: 20px">
+                <th style="width: 10%;" class="align-middle" colspan="2" rowspan="5" >
+                  <img class="bg-white" src="assets/img/macbookprom1.png" alt="(Data Dari API)" style="width: 200px; border-radius: 20px">
                 </th>
                 <th class="bg-white text-center" style="border-radius: 20px" colspan="3"></th>
                 <th style="width: 5%;" class="align-middle" rowspan="5">
-                  <button class="btn btn-danger btn-md">
-                    <i class="fa fa-trash"></i>
-                  </button>
-                  <br>
-                  <br>
-                  <button class="btn btn-success btn-md">
-                    <i class="fa fa-edit"></i>
-                  </button>
+                  <a href="#">
+                    <i class="py-2 fa-solid fa-trash fa-2xl"></i>
+                  </a>
+                  <br />
+                  <br />
+                  <a  href="editproduk.html">
+                    <i class="py-2 fa-solid fa-edit fa-2xl"></i>
+                  </a>
                 </th>
               </tr>
               <tr>
@@ -219,7 +218,6 @@
     </div>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="assets/js/produk/delete_produk.js"></script>
   <script src="assets/js/produk/read_produk.js"></script>
   <script src="assets/js/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
