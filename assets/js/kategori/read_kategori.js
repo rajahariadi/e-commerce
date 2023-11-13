@@ -19,12 +19,12 @@ $(document).ready(function () {
                         '<td>' + (i + 1) + '</td>' +
                         '<td>' + kategori[i].nama_kategori + '</td>' +
                         '<td>' +
-                        '<a href="editkategori.html" title="Ubah" class="btn btn-success btn-sm">' +
+                        '<button class="btn btn-success btn-sm">' +
                         '<i class="fa fa-edit"></i>' +
-                        '</a>' +
-                        '<a href="#" title="Hapus" class="btn btn-danger btn-sm">' +
+                        '</button>' +
+                        '<button class="btn btn-danger btn-sm">' +
                         '<i class="fa fa-trash"></i>' +
-                        '</a>' +
+                        '</button>' +
                         '</td>' +
                         '</tr>'
                     );
@@ -41,3 +41,4 @@ $(document).ready(function () {
         }
     });
 });
+
