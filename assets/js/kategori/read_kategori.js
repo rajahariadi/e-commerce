@@ -19,10 +19,10 @@ $(document).ready(function () {
                         '<td>' + (i + 1) + '</td>' +
                         '<td>' + kategori[i].nama_kategori + '</td>' +
                         '<td>' +
-                        '<button class="btn btn-success btn-sm">' +
+                        '<button class="btn btn-success btn-md m-2">' +
                         '<i class="fa fa-edit"></i>' +
                         '</button>' +
-                        '<button class="btn btn-danger btn-sm">' +
+                        '<button class="btn btn-danger btn-md m-2">' +
                         '<i class="fa fa-trash"></i>' +
                         '</button>' +
                         '</td>' +
