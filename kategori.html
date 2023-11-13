@@ -14,7 +14,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <link href="https://cdn.datatables.net/v/dt/dt-1.13.7/b-2.4.2/sl-1.7.0/datatables.css" rel="stylesheet" />
   <script src="https://cdn.datatables.net/v/dt/dt-1.13.7/b-2.4.2/sl-1.7.0/datatables.js"></script>
-  <script src="env.js"></script>
+  <script src="target/env.js"></script>
   <title>Apple Store</title>
 </head>
 
@@ -193,50 +193,8 @@
       </p>
     </div>
   </div>
-  <script>
-    $(document).ready(function () {
-      $.ajax({
-        type: "GET",
-        url: host+"/dummy/read_kategori.php",
-        dataType: "json",
-        async: true,
-        success: function (data) {
-          if (data.status === 200) {
-            var kategori = data.body.data;
-
-            // Clear existing rows
-            $('#kategori tbody').empty();
-
-            // Populate the table with new data
-            for (var i = 0; i < kategori.length; i++) {
-              $('#kategori tbody').append(
-                '<tr>' +
-                '<td>' + (i + 1) + '</td>' +
-                '<td>' + kategori[i].nama_kategori + '</td>' +
-                '<td>' +
-                '<a href="editkategori.html" title="Ubah" class="btn btn-success btn-sm">' +
-                '<i class="fa fa-edit"></i>' +
-                '</a>' +
-                '<a href="#" title="Hapus" class="btn btn-danger btn-sm">' +
-                '<i class="fa fa-trash"></i>' +
-                '</a>' +
-                '</td>' +
-                '</tr>'
-              );
-            }
-
-            // Initialize DataTable
-            $("#kategori").dataTable();
-          } else {
-            console.error('Failed to fetch data');
-          }
-        },
-        error: function (xhr, status, error) {
-          console.error('Error:', error);
-        }
-      });
-    });
-  </script>
+  <script src="assets/js/kategori/read_kategori.js"></script>
+  <script src="assets/js/script.js"></script>
 
 </body>
 
