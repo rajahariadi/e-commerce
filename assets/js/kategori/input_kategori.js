@@ -3,7 +3,7 @@ $('button').on('click', function() {
 
     $.ajax({
         type:'POST',
-        url:"http://e-commerce.test/dummy/input_kategori.php",
+        url:host+"/dummy/input_kategori.php",
         data: {
             nama_kategori: kategori
         },
@@ -11,7 +11,7 @@ $('button').on('click', function() {
         async: true,
         success: function(result){
             console.log(result);
-            window.location.replace("http://e-commerce.test/kategori.html");
+            window.location.replace(host+"/kategori.html");
         }
     }); 
 });
