@@ -1,3 +1,4 @@
+
 $('button').on('click', function() {
     var kategori = $('input[name="nama_kategori"]').val();
 
@@ -8,9 +9,11 @@ $('button').on('click', function() {
             nama_kategori: kategori
         },
         dataType: 'json',
-        async: true,
-        success: function(result) {
-            console.log(result);
+        async: false,
+        success: function(result){
+           console.log(result);
         }
     });
-});
+
+})
+
