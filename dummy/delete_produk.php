@@ -3,7 +3,7 @@ header('Content-Type: application/json');
 
 $res = [
   "status" => 200,
-  "msg" => "Data Kategori Berhasil Dihapus",
+  "msg" => "Data Produk Berhasil Dihapus",
   "body" => [
     "data" => []
   ]

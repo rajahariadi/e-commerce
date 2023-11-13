@@ -1,7 +1,7 @@
 $(document).on('click', '.btn-danger', function () {
     $.ajax({
         type: 'DELETE',
-        url: host + "/dummy/delete_kategori.php",
+        url: host + "/dummy/delete_produk.php",
         // data: null, // Tidak perlu mengirim data untuk metode DELETE
         async: true,
         success: function (data) {
