@@ -196,30 +196,43 @@
     $(document).ready(function () {
       $.ajax({
         type: "GET",
-        url: "http://e-commerce.test/assets/api/read_kategori.php",
+        url: "http://e-commerce.test/dummy/read_kategori.php",
         dataType: "json",
         async: true,
         success: function (data) {
-          $("#kategori").dataTable({
-            data: data.body.data,
-            columns: [
-              { data: null, render: function (data, type, row, meta) { return meta.row + 1; } },
-              { data: "nama_kategori" },
-              {
-                defaultContent: `                         
-                <td>
-                            <a href="editkategori.html" title="Ubah" class="btn btn-success btn-sm">
-                                <i class="fa fa-edit"></i>
-                            </a>
-                            <a href="#" title="Hapus" class="btn btn-danger btn-sm">
-                                <i class="fa fa-trash"></i>
-                            </a>
-                        </td>
-                    </tr>`,
-              },
-            ],
-          });
+          if (data.status === 200) {
+            var kategori = data.body.data;
+
+            // Clear existing rows
+            $('#kategori tbody').empty();
+
+            // Populate the table with new data
+            for (var i = 0; i < kategori.length; i++) {
+              $('#kategori tbody').append(
+                '<tr>' +
+                '<td>' + (i + 1) + '</td>' +
+                '<td>' + kategori[i].nama_kategori + '</td>' +
+                '<td>' +
+                '<a href="editkategori.html" title="Ubah" class="btn btn-success btn-sm">' +
+                '<i class="fa fa-edit"></i>' +
+                '</a>' +
+                '<a href="#" title="Hapus" class="btn btn-danger btn-sm">' +
+                '<i class="fa fa-trash"></i>' +
+                '</a>' +
+                '</td>' +
+                '</tr>'
+              );
+            }
+
+            // Initialize DataTable
+            $("#kategori").dataTable();
+          } else {
+            console.error('Failed to fetch data');
+          }
         },
+        error: function (xhr, status, error) {
+          console.error('Error:', error);
+        }
       });
     });
   </script>
