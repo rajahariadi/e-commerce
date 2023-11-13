@@ -6,6 +6,7 @@ $(document).ready(function () {
         dataType: 'json',
         success: function (response) {
             if (response.status === 200) {
+                console.log(response);
                 for (var i = 0; i < response.body.data.length; i++) {
                     // Gantilah nilai "(Data Dari API)" dengan data yang diterima
                     $('#produk tbody tr:nth-child(1) th[colspan="3"]').text(response.body.data[2].nama_brg);
