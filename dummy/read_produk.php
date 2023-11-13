@@ -1,7 +1,7 @@
 <?php
 $res = [
   "status" => 200,
-  "msg" => "Data berhasil di input",
+  "msg" => "Data berhasil di ambil",
   "body" => [
     "data" => [
       ["gambar_brg" => "Gambar"],
