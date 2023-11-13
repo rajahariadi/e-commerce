@@ -8,7 +8,7 @@ $('#formKategori').submit(function(e){
         cache: false, contentType: false, processData: false,
         success: (result) => {
             console.log(result);
-            window.location.replace(host+"/produk_anda.html");
+            window.location.replace(host+"/kategori.html");
         },
         error: (a) => {
             //if error

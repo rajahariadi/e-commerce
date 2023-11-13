@@ -1,29 +1,17 @@
-$('button').on('click', function() {
-    var gbr_brg = $('input[name="gambar"]').val();
-    var  kd_brg = $('input[name="kode"]').val();
-    var nm_brg = $('input[name="nama"]').val();
-    var hrg_brg = $('input[name="harga"]').val();
-    var id_ktg = $('input[name="id_ktg"]').val();
-    var stok = $('input[name="stok"]').val();
-    var deskripsi = $('input[name="deskripsi"]').val();
-
+$('#formProduk').submit(function(e){
+    e.preventDefault();
+    var formData = new FormData(this);
     $.ajax({
-        type:'POST',
-        url:host+"/dummy/input_produk.php",
-        data: {
-            gambar_brg: gbr_brg,
-            kode_brg: kd_brg,
-            nama_brg: nm_brg,
-            harga_brg: hrg_brg,
-            id_kategori: id_ktg,
-            stok_brg: stok,
-            deskripsi_brg: deskripsi
-        },
-        dataType: 'json',
-        async: true,
-        success: function(result){
+        type: 'POST',
+        url: host+"/dummy/input_produk.php",
+        data: formData,
+        cache: false, contentType: false, processData: false,
+        success: (result) => {
             console.log(result);
             window.location.replace(host+"/produk_anda.html");
+        },
+        error: (a) => {
+            //if error
         }
-    }); 
-});
+    });
+})

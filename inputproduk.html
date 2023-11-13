@@ -146,36 +146,31 @@
                 </div>
                 <br>
                 <br>
-                <div class="row justify-content-center">
-                    <!-- left column -->
-                    <div class=" pt-1 ">
-                        <div class="card-body text-center">
-
-                            <input type="file" id="file-input" accept="image/png, image/jpeg" onchange="preview()"
-                                multiple>
-                            <div class="gambar-produk" id="images">
-
-                            </div>
-                            <p id="num-of-files">No Files Chosen</p>
-                            <label class="gambar" for="file-input">
-                                <i class="fas fa-upload"></i> &nbsp; Choose A Photo
-                            </label>
-
-
-
-
-
-                        </div>
-                    </div>
 
                     <!-- edit form column -->
+                    <form action="" id="formProduk" enctype="multipart/form-data">
+                    <div class="row justify-content-center">
+                      <!-- left column -->
+                      <div class=" pt-1 ">
+                          <div class="card-body text-center">
+  
+                              <input type="file" id="file-input" accept="image/png, image/jpeg" onchange="preview()"
+                                  multiple>
+                              <div class="gambar-produk" id="images">
+  
+                              </div>
+                              <p id="num-of-files">No Files Chosen</p>
+                              <label class="gambar" for="file-input">
+                                  <i class="fas fa-upload" name="gambar_brg"></i> &nbsp; Choose A Photo
+                              </label>
+                          </div>
+                      </div>
                     <div class="col-md-9 personal-info">
-
                             <div class="form-group row">
                                 <label class="col-lg-3 control-label">Kode Barang</label>
                                 <label for="">:</label>
                                 <div class="col-lg-7">
-                                    <input class="form-control bg-custom" type="text" value="" placeholder="Kode Barang">
+                                    <input class="form-control bg-custom" type="text" value="" placeholder="Kode Barang" name="kode_brg">
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -195,7 +190,7 @@
                                         </div>
                                         <input class="form-control bg-custom" type="text"
                                             oninput="this.value=this.value.replace(/[^0-9]/g,'')"
-                                            placeholder="Harga Barang">
+                                            placeholder="Harga Barang" name="harga_brg">
                                     </div>
                                 </div>
                             </div>
@@ -203,7 +198,7 @@
                                 <label class="col-lg-3 control-label">Kategori</label>
                                 <label for="">:</label>
                                 <div class="col-lg-7">
-                                    <select class="form-control bg-custom" name="" id="">
+                                    <select class="form-control bg-custom" name="id_kategori" id="">
                                         <option value="">- Pilih -</option>
                                         <option value="">Smartphone</option>
                                         <option value="">Laptop</option>
@@ -215,27 +210,27 @@
                                 <label class="col-lg-3 control-label">Stock Barang</label>
                                 <label for="">:</label>
                                 <div class="col-lg-7">
-                                    <input class="form-control bg-custom" type="text" value="" placeholder="Stock Barang">
+                                    <input class="form-control bg-custom" type="text" value="" placeholder="Stock Barang" name="stok_brg">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-lg-3 control-label">Deskripsi</label>
                                 <label for="">:</label>
                                 <div class="col-lg-7">
-                                    <textarea class="form-control bg-custom" id="" cols="10" rows="5"></textarea>
+                                    <textarea class="form-control bg-custom" id="" cols="10" rows="5" name="deskripsi_brg"></textarea>
                                 </div>
                             </div>
                             <div class="form-group row p-3">
                                 <div class="col-10 text-right">
                                     <a href="produk_anda.html" class="m-2 btn btn-secondary btn-lg"
                                         role="button">Kembali</a>
-                                        <button class="btn btn-primary btn-lg">Tambahkan Produk</button>
+                                    <input type="submit" name="simpan" class="btn btn-primary btn-lg" value="Tambahkan Produk">
 
                                 </div>
                             </div>
                     </div>
                 </div>
-
+              </form>
             </div>
         </div>
     </div>
