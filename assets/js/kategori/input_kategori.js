@@ -1,17 +1,17 @@
-$('button').on('click', function() {
-    var kategori = $('input[name="kategori"]').val();
-
+$('#formKategori').submit(function(e){
+    e.preventDefault();
+    var formData = new FormData(this);
     $.ajax({
-        type:'POST',
-        url:host+"/dummy/input_kategori.php",
-        data: {
-            nama_kategori: kategori
-        },
-        dataType: 'json',
-        async: true,
-        success: function(result){
+        type: 'POST',
+        url: host+"/dummy/input_kategori.php",
+        data: formData,
+        cache: false, contentType: false, processData: false,
+        success: (result) => {
             console.log(result);
-            window.location.replace(host+"/kategori.html");
+            window.location.replace(host+"/produk_anda.html");
+        },
+        error: (a) => {
+            //if error
         }
-    }); 
-});
+    });
+})
