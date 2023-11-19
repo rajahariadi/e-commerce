@@ -5,7 +5,7 @@ $('#formProduk').submit(function(e){
         type: 'POST',
         url: host+"/dummy/update_produk.php",
         data: formData,
-        cache: false, contentType: false, processData: false,
+        cache: false, contentType: false, processData: false, dataType: 'json',
         success: (result) => {
             console.log(result);
             window.location.replace(host+"/produk_anda.html");
